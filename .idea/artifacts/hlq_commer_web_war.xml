@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="hlq-commer-web:war">
+    <output-path>$PROJECT_DIR$/hlq-commer-web/target</output-path>
+    <root id="archive" name="hlq-commer-web-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="hlq-commer-web:war exploded" />
+    </root>
+  </artifact>
+</component>

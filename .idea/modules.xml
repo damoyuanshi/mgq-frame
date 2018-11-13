@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/mgq-frame-app/hlq-commer-app.iml" filepath="$PROJECT_DIR$/mgq-frame-app/hlq-commer-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mgq-frame-common/hlq-commer-common.iml" filepath="$PROJECT_DIR$/mgq-frame-common/hlq-commer-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mgq-frame-service/hlq-commer-service.iml" filepath="$PROJECT_DIR$/mgq-frame-service/hlq-commer-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mgq-frame-shopWeb/hlq-commer-shopWeb.iml" filepath="$PROJECT_DIR$/mgq-frame-shopWeb/hlq-commer-shopWeb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mgq-frame-web/hlq-commer-web.iml" filepath="$PROJECT_DIR$/mgq-frame-web/hlq-commer-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/owerFrame.iml" filepath="$PROJECT_DIR$/.idea/owerFrame.iml" />
+    </modules>
+  </component>
+</project>

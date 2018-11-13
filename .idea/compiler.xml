@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <resourceExtensions />
+    <wildcardResourcePatterns>
+      <entry name="!?*.java" />
+      <entry name="!?*.form" />
+      <entry name="!?*.class" />
+      <entry name="!?*.groovy" />
+      <entry name="!?*.scala" />
+      <entry name="!?*.flex" />
+      <entry name="!?*.kt" />
+      <entry name="!?*.clj" />
+      <entry name="!?*.aj" />
+    </wildcardResourcePatterns>
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="false">
+        <processorPath useClasspath="true" />
+      </profile>
+      <profile default="false" name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="hlq-commer-app" />
+        <module name="hlq-commer-common" />
+        <module name="hlq-commer-service" />
+        <module name="hlq-commer-shopWeb" />
+        <module name="hlq-commer-web" />
+        <module name="mgq-frame-app" />
+        <module name="mgq-frame-common" />
+        <module name="mgq-frame-service" />
+        <module name="mgq-frame-shopWeb" />
+        <module name="mgq-frame-web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="hlq-commer-app" target="1.7" />
+      <module name="hlq-commer-common" target="1.7" />
+      <module name="hlq-commer-service" target="1.7" />
+      <module name="hlq-commer-shopWeb" target="1.7" />
+      <module name="hlq-commer-web" target="1.7" />
+      <module name="mgq-frame-app" target="1.7" />
+      <module name="mgq-frame-common" target="1.7" />
+      <module name="mgq-frame-service" target="1.7" />
+      <module name="mgq-frame-shopWeb" target="1.7" />
+      <module name="mgq-frame-web" target="1.7" />
+      <module name="owerFrame" target="1.7" />
+      <module name="vsoft-app" target="1.8" />
+      <module name="vsoft-common" target="1.8" />
+      <module name="vsoft-service" target="1.8" />
+      <module name="vsoft-shopWeb" target="1.8" />
+      <module name="vsoft-web" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
