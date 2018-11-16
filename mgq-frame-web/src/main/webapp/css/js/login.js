@@ -11,7 +11,7 @@ function submitBackstageLogin(){
 		return;
 	}
 	$.ajax({
-		url : "/user/submitBackstageLogin",
+		url : "/userController/submitBackstageLogin",
 		type : 'post',
 		dataType : 'json',
 		data : {username: username, password: password},
@@ -20,7 +20,7 @@ function submitBackstageLogin(){
 				alert('用户名或密码错误');
 				return;
 			}
-			window.location.href = "/user/customer_index";
+			window.location.href = "/userController/customer_index";
 		}
 	})
 	

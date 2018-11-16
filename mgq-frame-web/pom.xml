@@ -10,7 +10,8 @@
 
   <artifactId>mgq-frame-web</artifactId>
   <name>mgq-frame-web</name>
-  <url>http://maven.apache.org</url>
+  <!--<url>http://maven.apache.org</url>-->
+	<packaging>war</packaging>
 
   <dependencies>
     <dependency>
@@ -29,7 +30,20 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			<!-- 第三方tomcat 第二步：移除嵌入式tomcat插件-->
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-tomcat</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
+	  <!-- add tomcat 第三步：-->
+	  <dependency>
+		  <groupId>org.springframework.boot</groupId>
+		  <artifactId>spring-boot-starter-tomcat</artifactId>
+		  <scope>provided</scope>
+	  </dependency>
 
 		<!-- 集成Dubbo -->
 		<dependency>
@@ -73,7 +87,7 @@
 	    <dependency>  
       <groupId>org.apache.tomcat.embed</groupId>  
       <artifactId>tomcat-embed-jasper</artifactId>  
-      <scope>provided</scope>  
+      <!--<scope>provided</scope>  -->
     </dependency> 
 	    
 		<!-- 重启部署依赖 -->
@@ -97,5 +111,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 		</dependency>
+<!--
+	  <dependency>
+		  <groupId>net.sf.json-lib</groupId>
+		  <artifactId>json-lib</artifactId>
+		  <version>2.4</version>
+	  </dependency>-->
   </dependencies>
 </project>

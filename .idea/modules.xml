@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/mgq-frame-app/hlq-commer-app.iml" filepath="$PROJECT_DIR$/mgq-frame-app/hlq-commer-app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mgq-frame-common/hlq-commer-common.iml" filepath="$PROJECT_DIR$/mgq-frame-common/hlq-commer-common.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mgq-frame-service/hlq-commer-service.iml" filepath="$PROJECT_DIR$/mgq-frame-service/hlq-commer-service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mgq-frame-shopWeb/hlq-commer-shopWeb.iml" filepath="$PROJECT_DIR$/mgq-frame-shopWeb/hlq-commer-shopWeb.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mgq-frame-web/hlq-commer-web.iml" filepath="$PROJECT_DIR$/mgq-frame-web/hlq-commer-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mgq-frame-app/mgq-frame-app.iml" filepath="$PROJECT_DIR$/mgq-frame-app/mgq-frame-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mgq-frame-common/mgq-frame-common.iml" filepath="$PROJECT_DIR$/mgq-frame-common/mgq-frame-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mgq-frame-service/mgq-frame-service.iml" filepath="$PROJECT_DIR$/mgq-frame-service/mgq-frame-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mgq-frame-shopWeb/mgq-frame-shopWeb.iml" filepath="$PROJECT_DIR$/mgq-frame-shopWeb/mgq-frame-shopWeb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mgq-frame-web/mgq-frame-web.iml" filepath="$PROJECT_DIR$/mgq-frame-web/mgq-frame-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/owerFrame.iml" filepath="$PROJECT_DIR$/.idea/owerFrame.iml" />
     </modules>
   </component>

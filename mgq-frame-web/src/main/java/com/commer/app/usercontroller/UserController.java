@@ -1,29 +1,24 @@
 package com.commer.app.usercontroller;
 
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
+import com.commer.app.entity.User;
+import com.commer.app.user.UserService;
+import net.minidev.json.JSONObject;
+import org.apache.log4j.Logger;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
-import org.apache.log4j.Logger;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.ModelAndView;
-
-import com.commer.app.UserService.UserService;
-import com.commer.app.entity.User;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 @RestController 
-@RequestMapping("/user") 
+@RequestMapping("/userController")
 public class UserController extends BaseController{
 	private static Logger logger = Logger.getLogger(UserController.class);  
 	   
@@ -35,9 +30,7 @@ public class UserController extends BaseController{
    
     /*  
      *  http://localhost:8080/user/getUserById?id=1  
-     */  
-   
-	
+     */
 //    @GetMapping(value = "getUserById") 
 	@RequestMapping("/getUserById")
     public Object getUserById() {  
@@ -72,10 +65,32 @@ public class UserController extends BaseController{
     public ModelAndView BackstageIndex(HttpServletRequest request, HttpSession session) {
 		
 		//判断如果服务器存在用户session的话，不需要重新登录来访问该(配置拦截设置)
-		if (session.getAttribute("user") != null)
+		if (session.getAttribute("user") != null){
             return new ModelAndView("customer_index");
+        }
 
         // 跳转登录页面
 		return new ModelAndView("login");
+    }
+
+
+
+    @RequestMapping("/lb_login")
+    public String serverLogin(HttpServletRequest request,HttpSession session,HttpServletResponse response) throws IOException{
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        User user = userService.checkAdministratorsUser(username, password);
+
+        //判断不存在该用户的情况下
+        if (user == null) {
+            return null;
+        }
+        session.setAttribute("user", user);
+        Map<String,Object> map = new HashMap<String,Object>();
+        map.put("code","success");
+        map.put("msg","成功");
+        map.put("object",user);
+
+        return JSONObject.toJSONString(map);
     }
 }

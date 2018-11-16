@@ -12,7 +12,7 @@
   <artifactId>mgq-frame-common</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>mgq-frame-common</name>
-  <url>http://maven.apache.org</url>
+  <!--<url>http://maven.apache.org</url>-->
   
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -48,5 +48,11 @@
             <artifactId>emoji-java</artifactId>
             <version>3.2.0</version>
         </dependency>
+      <dependency>
+          <groupId>junit</groupId>
+          <artifactId>junit</artifactId>
+          <version>RELEASE</version>
+          <scope>test</scope>
+      </dependency>
   </dependencies>
 </project>

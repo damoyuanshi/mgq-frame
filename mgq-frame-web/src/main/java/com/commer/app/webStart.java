@@ -1,9 +1,11 @@
 package com.commer.app;
 
 
-import com.commer.app.UserService.UserService;
+import com.commer.app.user.UserService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ImportResource;
 
@@ -12,7 +14,7 @@ import org.springframework.context.annotation.ImportResource;
  */
 @SpringBootApplication
 @ImportResource(locations={"classpath:dubbo-consumer.xml"})
-public class webStart
+public class webStart extends SpringBootServletInitializer
 {
 
     public static void main( String[] args )
@@ -21,7 +23,11 @@ public class webStart
         UserService userService = tc.getBean(UserService.class);
         System.out.println(userService.selectByPrimaryKey(1).getUsername());
     }
-    
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+        // 注意这里要指向原先用main方法执行的Application启动类
+        return builder.sources(webStart.class);
+    }
     /*@Configuration
     static class WebMvcConfigurer extends WebMvcConfigurerAdapter {
 

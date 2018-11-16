@@ -12,7 +12,7 @@
 <script type="text/javascript" src="/css/js/verificationNumbers.js"></script>
 <script type="text/javascript" src="/css/js/Particleground.js"></script>
 <script type="text/javascript" src="/css/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/js/login.js"></script>
+<script type="text/javascript" src="/css/js/login.js"></script>
 <script>
 	$(document).ready(function() {
 		//例子背景特效

@@ -10,8 +10,8 @@
   
   <groupId>mgq-frame-shopWeb</groupId>
   <artifactId>mgq-frame-shopWeb</artifactId>
-  <name>mgq-frame-shopWeb Maven Webapp</name>
-  <url>http://maven.apache.org</url>
+  <name>mgq-frame-shopWeb</name>
+  <!--<url>http://maven.apache.org</url>-->
   
   <dependencies>
     <dependency>

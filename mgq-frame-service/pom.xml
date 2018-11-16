@@ -26,7 +26,7 @@
 			<artifactId>mgq-frame-app</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-		<!-- 集成Dubbo -->
+<!-- 集成Dubbo -->
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>dubbo</artifactId>
@@ -59,13 +59,14 @@
 			<artifactId>zkclient</artifactId>
 			<version>0.1</version>
 		</dependency>
+<!-- 集成dubbo end-->
 
-		<!-- mysql驱动 -->
+<!-- mysql驱动 -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
-		
+		<!--数据连接池-->
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid</artifactId>
@@ -78,19 +79,24 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.34_1</version>
 		</dependency>
-
-		<!-- spring-boot mybatis依赖 -->
+<!-- mysql驱动  end-->
+<!-- spring-boot mybatis依赖 -->
 		<dependency>
 			<groupId>org.mybatis.spring.boot</groupId>
 			<artifactId>mybatis-spring-boot-starter</artifactId>
 			<version>1.1.1</version>
 		</dependency>
-
-		<!-- 解析配置文件 -->
+<!-- 解析配置文件 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-configuration-processor</artifactId>
 			<optional>true</optional>
+		</dependency>
+
+<!--集成 redis-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-redis</artifactId>
 		</dependency>
 	</dependencies>
 </project>

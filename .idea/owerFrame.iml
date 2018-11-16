@@ -3,13 +3,7 @@
   <component name="FacetManager">
     <facet type="Spring" name="Spring">
       <configuration>
-        <fileset id="fileset" name="Spring Application Context" removed="false">
-          <file>file://$MODULE_DIR$/hlq-commer-web/src/main/resources/dubbo-consumer.xml</file>
-          <file>file://$MODULE_DIR$/hlq-commer-web/target/classes/dubbo-consumer.xml</file>
-          <file>file://$MODULE_DIR$/hlq-commer-service/src/main/resources/dubboprovider.xml</file>
-          <file>file://$MODULE_DIR$/hlq-commer-shopWeb/src/main/resources/dubbo-shopConsumer.xml</file>
-          <file>file://$MODULE_DIR$/hlq-commer-service/target/classes/dubboprovider.xml</file>
-        </fileset>
+        <fileset id="fileset" name="Spring Application Context" removed="false" />
       </configuration>
     </facet>
     <facet type="web" name="Web">
@@ -17,9 +11,7 @@
         <descriptors>
           <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/mgq-frame-common/WebContent/WEB-INF/web.xml" />
         </descriptors>
-        <webroots>
-          <root url="file://$MODULE_DIR$/hlq-commer-common/WebContent" relative="/" />
-        </webroots>
+        <webroots />
       </configuration>
     </facet>
     <facet type="web" name="Web2">
@@ -27,9 +19,7 @@
         <descriptors>
           <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/mgq-frame-web/src/main/webapp/WEB-INF/web.xml" />
         </descriptors>
-        <webroots>
-          <root url="file://$MODULE_DIR$/hlq-commer-web/src/main/webapp" relative="/" />
-        </webroots>
+        <webroots />
       </configuration>
     </facet>
     <facet type="web" name="Web3">
@@ -37,13 +27,16 @@
         <descriptors>
           <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/mgq-frame-shopWeb/src/main/webapp/WEB-INF/web.xml" />
         </descriptors>
-        <webroots>
-          <root url="file://$MODULE_DIR$/hlq-commer-shopWeb/src/main/webapp" relative="/" />
-        </webroots>
+        <webroots />
+      </configuration>
+    </facet>
+    <facet type="web" name="Web4">
+      <configuration>
+        <webroots />
       </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="false">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">

@@ -1,13 +1,10 @@
 package com.commer.app;
 
-import java.io.IOException;
-
-import javax.sql.DataSource;
-
+import com.alibaba.druid.pool.DruidDataSource;
+import com.alibaba.dubbo.config.annotation.Service;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -16,15 +13,15 @@ import org.springframework.context.annotation.ComponentScan.Filter;
 import org.springframework.context.annotation.ImportResource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 
-import com.alibaba.druid.pool.DruidDataSource;
-import com.alibaba.dubbo.config.annotation.Service;
+import javax.sql.DataSource;
+import java.io.IOException;
 
 
 @SpringBootApplication
-@ComponentScan(basePackages = { "com.commer.app.service.impl" }, includeFilters = {
+@ComponentScan(basePackages = { "com.commer.app.service" }, includeFilters = {
 		@Filter(classes = { Service.class}) })
-@ImportResource(locations = { "classpath:dubboprovider.xml" })
-@MapperScan("com.commer.app.mapper")
+@ImportResource(locations = { "classpath:dubboprovider.xml"})
+@MapperScan("com.commer.app.dao")
 
 public class App {
 
@@ -44,7 +41,6 @@ public class App {
 	}
 
 	public static void main(String[] args) throws IOException {
-		SpringApplication.run(App.class, args);
 		System.out.println("服务运行中...");
 		System.in.read();
 	}
