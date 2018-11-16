@@ -11,12 +11,10 @@
     <result column="identity" property="identity" jdbcType="INTEGER" />
     <result column="imageUrl" property="imageurl" jdbcType="VARCHAR" />
     <result column="sex" property="sex" jdbcType="INTEGER" />
-    <result column="email" property="email" jdbcType="VARCHAR" />
-    <result column="age" property="age" jdbcType="INTEGER" />
     <result column="createTime" property="createtime" jdbcType="TIMESTAMP" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, userNumber, username, password, classid, credit, identity, imageUrl, sex,email,age,createTime
+    id, userNumber, username, password, classid, credit, identity, imageUrl, sex, createTime
   </sql>
   <select id="selectByPrimaryKey" resultType="com.commer.app.entity.User" parameterType="java.lang.Integer" >
     select 

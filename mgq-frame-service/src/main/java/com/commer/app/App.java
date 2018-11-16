@@ -5,6 +5,7 @@ import com.alibaba.dubbo.config.annotation.Service;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -18,9 +19,9 @@ import java.io.IOException;
 
 
 @SpringBootApplication
-@ComponentScan(basePackages = { "com.commer.app.service" }, includeFilters = {
+@ComponentScan(basePackages = { "com.commer.app.service.user" }, includeFilters = {
 		@Filter(classes = { Service.class}) })
-@ImportResource(locations = { "classpath:dubboprovider.xml"})
+@ImportResource(locations = { "classpath:dubboprovider.xml" })
 @MapperScan("com.commer.app.dao")
 
 public class App {
@@ -41,6 +42,7 @@ public class App {
 	}
 
 	public static void main(String[] args) throws IOException {
+		SpringApplication.run(App.class, args);
 		System.out.println("服务运行中...");
 		System.in.read();
 	}
